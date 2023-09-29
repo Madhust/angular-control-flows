@@ -1,0 +1,42 @@
+<h2>IF..ELSE Statement</h2>
+@if (show) {
+  <span>Inside if</span>
+} @else if (showAnotherIf) {
+  <span>Inside else if</span>
+} @else {
+  <span>Inside else</span>
+}
+
+<h2>For Loop</h2>
+<ul>
+  @for (item of skills; track item; let i = $index, f = $first; let l = $last, ev = $even, o = $odd; let co = $count) {
+    <li>{{item}}
+      <ul>
+        <li>Index - {{i}}</li>
+        <li>Is First - {{f}}</li>
+        <li>Is Last - {{l}}</li>
+        <li>Is even - {{ev}}</li>
+        <li>Is odd - {{o}}</li>
+        <li>Count - {{co}}</li>
+      </ul>
+    </li>
+  } @empty {
+    <li>No item</li>
+  }
+</ul>
+<h2>SWITCH CASE</h2>
+@switch (caseNo) {
+  @case (1) {
+    <span>Rendering case 1</span>
+  }
+  @case (2) {
+    <span>Rendering case 2</span>
+  }
+  @case (3) {
+    <span>Rendering case 3</span>
+  }
+  @default {
+    <span>Rendering default</span>
+  }
+}
+<router-outlet></router-outlet>
